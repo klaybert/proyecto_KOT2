@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<title></title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+
+	<div id="cat">
+		
+	</div>
+
+
+<script type="text/javascript">
+	//activamos el buscador de categorias
+            $(document).ready(function()
+                {
+                alert("me cargué");
+                var dato=1;
+                $.post(
+                    "cat_gen.php", 
+                    {datos:dato},
+                    function(mensaje)
+                    {
+                        console.log(mensaje);
+
+                    });                
+                }
+                );
+</script>
+</body>
+</html>
